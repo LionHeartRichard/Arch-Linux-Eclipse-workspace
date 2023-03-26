@@ -1,0 +1,17 @@
+package tanks.game.entitygame;
+
+public abstract class EntityGame {
+
+	public final EntityType type;
+	
+	protected float x;
+	protected float y;
+	public EntityGame(EntityType type, float x, float y) {
+		this.type = type;
+		this.x = x;
+		this.y = y;
+	}
+	
+	
+	
+}

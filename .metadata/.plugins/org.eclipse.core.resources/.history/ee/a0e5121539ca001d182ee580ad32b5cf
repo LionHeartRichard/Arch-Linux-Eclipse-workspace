@@ -1,0 +1,24 @@
+package tanks.game.myinput;
+
+import java.util.Arrays;
+
+import javax.swing.JFrame;
+
+public class MyInput extends JFrame{
+	
+	private boolean[] masButtons = new boolean[5];
+	
+	public MyInput() {
+		
+	}
+
+	public boolean[] getMasButtons() {
+		return Arrays.copyOf(masButtons, masButtons.length);
+	}
+	
+	public boolean checkButton(int keyButton) {
+		return masButtons[keyButton];
+	}
+	
+
+}

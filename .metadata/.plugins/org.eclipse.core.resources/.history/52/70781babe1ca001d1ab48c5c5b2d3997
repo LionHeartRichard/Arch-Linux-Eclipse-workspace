@@ -1,0 +1,19 @@
+package tanks.game.textures;
+
+import java.awt.image.BufferedImage;
+
+public class ListPictures {
+
+	private BufferedImage pictureList;
+	private int countPictures;
+	private int sizePicture;
+	private int picturesWidth;
+	public ListPictures(BufferedImage pictureList, int countPictures,
+			int sizePicture) {
+		this.pictureList = pictureList;
+		this.countPictures = countPictures;
+		this.sizePicture = sizePicture;
+		this.picturesWidth = pictureList.getWidth() / sizePicture;
+	}
+
+}

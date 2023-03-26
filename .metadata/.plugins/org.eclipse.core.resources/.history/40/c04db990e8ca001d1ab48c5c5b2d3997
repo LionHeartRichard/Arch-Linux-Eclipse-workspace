@@ -1,0 +1,25 @@
+package tanks.game.entitygame;
+
+import java.awt.Graphics2D;
+
+import tanks.game.myinput.MyInput;
+
+public class Player extends EntityGame {
+
+	public Player(float x, float y) {
+		super(EntityType.PLAYER, x, y);
+	}
+
+	@Override
+	protected void update(MyInput myInput) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	protected void render(Graphics2D g) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

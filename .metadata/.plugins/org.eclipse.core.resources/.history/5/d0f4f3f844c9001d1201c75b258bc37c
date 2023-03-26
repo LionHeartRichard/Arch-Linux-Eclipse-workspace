@@ -1,0 +1,21 @@
+package tanks.game;
+
+import javax.swing.Timer;
+
+import tanks.game.display.Display;
+
+public class Main{
+
+	public static void main(String[] args){
+		Display.create(1200, 800, "Tanks-GAME");
+
+		Timer timer = new Timer(1000 / 60, new AbstractAction(){
+			public void actionPerformed(ActionEvent e){
+
+			}
+		});
+		timer.setRepeats(true);
+		timer.start();
+	}
+
+}

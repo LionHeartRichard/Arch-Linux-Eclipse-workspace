@@ -1,0 +1,59 @@
+package tanks.game.entitygame;
+
+import java.awt.Graphics2D;
+import java.awt.image.BufferedImage;
+import java.util.Map;
+import java.util.HashMap;
+
+import tanks.game.myinput.MyInput;
+import tanks.game.textures.MyPicture;
+import tanks.game.textures.TextureAtlasPicteres;
+
+public class Player extends EntityGame {
+
+	public static final int PICTURE_SCALER = 16;
+
+	private enum DirectionTank {
+		NORTH(0 * PICTURE_SCALER, 0 * PICTURE_SCALER, 1 * PICTURE_SCALER, 1 * PICTURE_SCALER),
+		SOUTH(4 * PICTURE_SCALER, 0 * PICTURE_SCALER, 1 * PICTURE_SCALER, 1 * PICTURE_SCALER),
+		EAST(6 * PICTURE_SCALER, 0 * PICTURE_SCALER, 1 * PICTURE_SCALER, 1 * PICTURE_SCALER),
+		WEST(2 * PICTURE_SCALER, 0 * PICTURE_SCALER, 1 * PICTURE_SCALER, 1 * PICTURE_SCALER);
+
+		private int x, y, w, h;
+
+		private DirectionTank(int x, int y, int w, int h) {
+			this.x = x;
+			this.y = y;
+			this.w = w;
+			this.h = h;
+		}
+
+		protected BufferedImage getTexture(TextureAtlasPicteres pictere) {
+			return pictere.cut(x, y, w, h);
+		}
+
+	}
+
+	private DirectionTank direction;
+	private Map<DirectionTank, MyPicture> pictersMap;
+
+	public Player(float x, float y) {
+		super(EntityType.PLAYER, x, y);
+
+		direction = DirectionTank.NORTH;
+		pictersMap = new HashMap<DirectionTank, MyPicture>();
+	}
+
+	@Override
+	protected void update(MyInput myInput) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	protected void render(Graphics2D g) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
