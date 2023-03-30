@@ -2,3 +2,4 @@
 *.class
 __metadata__/
 *.metadata
+*metadata*
