@@ -6,6 +6,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="/home/kein/eclipse-workspace/Servers"/>
 			<item value="/home/kein/eclipse-workspace/mvc_result"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -30,14 +31,17 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="org.mvc.firstmodel"/>
 			<item value="org.mvcspring"/>
 			<item value="com.example.mvc_result"/>
 		</list>
 		<list key="groupId">
+			<item value="org-mvc-first-model"/>
 			<item value="org-mvc-spring-rich"/>
 			<item value="com-example"/>
 		</list>
 		<list key="artifactId">
+			<item value="mvc_first_model"/>
 			<item value="mvc_spring_rich"/>
 			<item value="mvc_result"/>
 		</list>

@@ -8,7 +8,7 @@
         <title>Home</title>
     </head>
     <body>
-        <h1>Hello my freind</h1>
+        <h1>Hello my friend</h1>
         <p>This is the homepage!</p>
         <br>
 		<a href="setEmployee">Please write your information</a>
