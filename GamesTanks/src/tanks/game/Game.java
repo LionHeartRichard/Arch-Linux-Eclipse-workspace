@@ -2,9 +2,13 @@ package tanks.game;
 
 import java.awt.Color;
 import java.awt.Graphics2D;
+import java.awt.event.KeyEvent;
+import java.io.IOException;
 
 import tanks.game.display.Display;
 import tanks.game.display.logic.MyTime;
+import tanks.game.myinput.MyInput;
+import tanks.game.textures.TextureAtlasPicteres;
 
 public class Game implements Runnable {
 
@@ -21,21 +25,24 @@ public class Game implements Runnable {
 	private boolean runing;
 	private Thread gameThread;
 
-	// delete
 	private Graphics2D graphics2D;
-	private float delta = 0;
-	private float deltaSpeed = 0;
 
 	float x = 0;
 	float y = 0;
 	float speed = 3;
 
-	// delete
+	MyInput myInput;
 
-	public Game() {
+	private TextureAtlasPicteres picterusAtlas;
+	public static final String PICTURES_FILE_NAME = "texture_atlas.png";
+
+	public Game() throws IOException {
 		runing = false;
 		Display.create(WIDTH, HEIGTH, TITLE, CLEAR_COLOR, NUM_BUFFER);
 		graphics2D = Display.getGraphics2d();
+		myInput = new MyInput();
+		Display.addMyInputListener(myInput);
+		picterusAtlas = new TextureAtlasPicteres(PICTURES_FILE_NAME);
 	}
 
 	public synchronized void start() {
@@ -61,8 +68,21 @@ public class Game implements Runnable {
 	}
 
 	private void update() {
-		delta += 0.02f;
-		deltaSpeed += 0.08f;
+		if (myInput.checkEnterButton(KeyEvent.VK_UP)) {
+			y -= speed;
+		} else {
+			if (myInput.checkEnterButton(KeyEvent.VK_DOWN)) {
+				y += speed;
+			} else {
+				if (myInput.checkEnterButton(KeyEvent.VK_RIGHT)) {
+					x += speed;
+				} else {
+					if (myInput.checkEnterButton(KeyEvent.VK_LEFT)) {
+						x -= speed;
+					}
+				}
+			}
+		}
 
 	}
 
@@ -71,7 +91,7 @@ public class Game implements Runnable {
 		Display.clear();
 
 		graphics2D.setColor(Color.red);
-		graphics2D.fillOval((int) x, (int) y, 100, 100);
+		graphics2D.drawImage(picterusAtlas.cut(0, 0, 16, 16), 300, 300, null);
 
 		Display.swapBuffer();
 

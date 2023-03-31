@@ -18964,3 +18964,6 @@ Caused by: java.lang.ExceptionInInitializerError: Exception java.lang.ExceptionI
 	at com.thoughtworks.xstream.XStream.<init>(XStream.java:342)
 	at org.apache.maven.plugin.war.util.WebappStructureSerializer.<clinit>(WebappStructureSerializer.java:47)
 	... 68 common frames omitted
+2023-03-30 19:00:58,409 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2023-03-30 21:20:41,736 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-03-30 22:05:45,075 [Worker-3: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.

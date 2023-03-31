@@ -6,6 +6,8 @@ import java.util.Arrays;
 
 import javax.swing.JFrame;
 
+import tanks.game.myinput.MyInput;
+
 public abstract class Display {
 
 	private static boolean created = false;
@@ -76,5 +78,9 @@ public abstract class Display {
 
 	public static void setTitle(String title) {
 		window.setTitle(title);
+	}
+
+	public static void addMyInputListener(MyInput myInput) {
+		window.add(myInput);
 	}
 }

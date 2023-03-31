@@ -1,4 +1,4 @@
-GitRepositoriesView.GitDirectories=/home/kein/eclipse-workspace/.git\:
-GitRepositoriesView.GitDirectories.relative=.git\:
+GitRepositoriesView.GitDirectories=/home/kein/eclipse-workspace/.git\:/home/kein/git/GamesTanks_Function/.git\:
+GitRepositoriesView.GitDirectories.relative=.git\:/home/kein/git/GamesTanks_Function/.git\:
 core_autoIgnoreDerivedResources=false
 eclipse.preferences.version=1

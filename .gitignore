@@ -3,3 +3,5 @@
 __metadata__/
 *.metadata
 *metadata*
+.metadata
+.metadata/
