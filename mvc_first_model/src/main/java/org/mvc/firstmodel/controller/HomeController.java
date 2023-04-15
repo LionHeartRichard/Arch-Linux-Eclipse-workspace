@@ -3,6 +3,7 @@ package org.mvc.firstmodel.controller;
 import java.io.IOException;
 
 import javax.servlet.http.HttpServletResponse;
+import javax.validation.Valid;
 
 import org.mvc.firstmodel.model.Employee;
 import org.springframework.stereotype.Controller;
@@ -12,8 +13,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
-
-import jakarta.validation.Valid;
 
 @Controller
 public class HomeController {
@@ -37,17 +36,4 @@ public class HomeController {
 			return "getEmplView";
 		}
 	}
-
-//	@RequestMapping(value = "/getEmplView", method = RequestMethod.GET)
-//	public String submit(@Validated @ModelAttribute("employee") Employee employee, BindingResult result,
-//			ModelMap model) {
-//		if (result.hasErrors()) {
-//			return "error";
-//		}
-//		model.addAttribute("name", employee.getName());
-//		model.addAttribute("surname", employee.getSurname());
-//		model.addAttribute("department", employee.getDepartment());
-//		model.addAttribute("salary", employee.getSalary());
-//		return "getEmplView";
-//	}
 }

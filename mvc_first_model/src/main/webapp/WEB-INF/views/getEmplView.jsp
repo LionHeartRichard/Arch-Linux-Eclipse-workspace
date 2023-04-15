@@ -12,5 +12,8 @@ Your department: ${employee.department}
 <br>
 Your salary: ${employee.salary}
 <br>
+Phone number: ${employee.phone}
+<br>
+Email: ${employee.email}
 </body>
 </html>
